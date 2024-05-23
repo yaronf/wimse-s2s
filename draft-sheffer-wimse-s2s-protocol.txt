@@ -2,10 +2,17 @@
 
 
 
-Workload Identity in Multi System Environments                Y. Sheffer
-Internet-Draft                                                    Intuit
-Intended status: Standards Track                             23 May 2024
-Expires: 24 November 2024
+Workload Identity in Multi System Environments               B. Campbell
+Internet-Draft                                                          
+Intended status: Standards Track                              D. Feldman
+Expires: 24 November 2024                                               
+                                                              J. Saloway
+                                                                        
+                                                      A. Schwenkschuster
+                                                                        
+                                                              Y. Sheffer
+                                                                  Intuit
+                                                             23 May 2024
 
 
                 WIMSE Service to Service Authentication
@@ -67,16 +74,24 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
+     1.1.  Deployment Architecture and Message Flow
    2.  Conventions and Definitions
-   3.  Security Considerations
-   4.  IANA Considerations
-   5.  Normative References
+   3.  Application Level Service To Service Authentication
+     3.1.  The WIMSE ID Token
+     3.2.  Option 1: DPoP-Based Authetication
+     3.3.  Option 2: Authentication Based on HTTP Message Signatures
+   4.  Using Mutual TLS for Service To Service Authentication
+   5.  Security Considerations
+   6.  IANA Considerations
+   7.  Normative References
    Acknowledgments
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
    TODO Introduction
+
+1.1.  Deployment Architecture and Message Flow
 
 2.  Conventions and Definitions
 
@@ -86,15 +101,27 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Security Considerations
+3.  Application Level Service To Service Authentication
 
-   TODO Security
+3.1.  The WIMSE ID Token
 
-4.  IANA Considerations
+3.2.  Option 1: DPoP-Based Authetication
 
-   This document has no IANA actions.
+3.3.  Option 2: Authentication Based on HTTP Message Signatures
 
-5.  Normative References
+4.  Using Mutual TLS for Service To Service Authentication
+
+5.  Security Considerations
+
+   TODO Security and Privacy
+
+   TLS trust assumptions, server vs mutual auth, middleboxes
+
+6.  IANA Considerations
+
+   TODO IANA
+
+7.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -109,7 +136,19 @@ Acknowledgments
 
    TODO acknowledge.
 
-Author's Address
+Authors' Addresses
+
+   Brian Campbell
+
+
+   Daniel Feldman
+
+
+   Joe Saloway
+
+
+   Arndt Schwenkschuster
+
 
    Yaron Sheffer
    Intuit
