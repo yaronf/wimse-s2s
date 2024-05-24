@@ -6,8 +6,8 @@ Workload Identity in Multi System Environments               B. Campbell
 Internet-Draft                                             Ping Identity
 Intended status: Standards Track                              D. Feldman
 Expires: 25 November 2024                                               
-                                                              J. Saloway
-                                                                        
+                                                              J. Salowey
+                                                                  Venafi
                                                       A. Schwenkschuster
                                                                         
                                                               Y. Sheffer
@@ -155,7 +155,9 @@ Authors' Addresses
    Daniel Feldman
 
 
-   Joe Saloway
+   Joe Salowey
+   Venafi
+   Email: joe.salowey@gmail.com
 
 
    Arndt Schwenkschuster
