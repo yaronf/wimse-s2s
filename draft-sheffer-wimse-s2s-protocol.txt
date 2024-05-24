@@ -78,7 +78,7 @@ Table of Contents
    2.  Conventions and Definitions
    3.  Application Level Service To Service Authentication
      3.1.  The WIMSE ID Token
-     3.2.  Option 1: DPoP-Based Authetication
+     3.2.  Option 1: DPoP-Inspired Authetication
      3.3.  Option 2: Authentication Based on HTTP Message Signatures
    4.  Using Mutual TLS for Service To Service Authentication
    5.  Security Considerations
@@ -105,7 +105,7 @@ Table of Contents
 
 3.1.  The WIMSE ID Token
 
-3.2.  Option 1: DPoP-Based Authetication
+3.2.  Option 1: DPoP-Inspired Authetication
 
 3.3.  Option 2: Authentication Based on HTTP Message Signatures
 
