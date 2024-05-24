@@ -93,6 +93,15 @@ Table of Contents
 
 1.1.  Deployment Architecture and Message Flow
 
+   +---------+
+   |         |
+   | This    |
+   | is      |
+   | a       |
+   | box     |
+   |         |
+   +---------+
+
 2.  Conventions and Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
