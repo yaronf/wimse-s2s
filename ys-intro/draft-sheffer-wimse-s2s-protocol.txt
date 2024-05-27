@@ -5,14 +5,14 @@
 Workload Identity in Multi System Environments               B. Campbell
 Internet-Draft                                             Ping Identity
 Intended status: Standards Track                              D. Feldman
-Expires: 25 November 2024                                               
+Expires: 28 November 2024                                               
                                                               J. Saloway
                                                                         
                                                       A. Schwenkschuster
                                                                         
                                                               Y. Sheffer
                                                                   Intuit
-                                                             24 May 2024
+                                                             27 May 2024
 
 
                 WIMSE Service to Service Authentication
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 November 2024.
+   This Internet-Draft will expire on 28 November 2024.
 
 Copyright Notice
 
@@ -113,11 +113,10 @@ Table of Contents
       connection between each pair of services.  This setup can be
       addressed by a simpler solution (Section 4).
 
-   It is an explicit goal of this protocol that a service deployment,
-   and in fact a single call chain, can include both architectures.  In
-   other words, Service A can call Service B with mutual TLS protection,
-   while the next call to Service C is protected at the application
-   level.
+   It is an explicit goal of this protocol that a service deployment can
+   include both architectures across a multi-chain call.  In other
+   words, Service A can call Service B with mutual TLS protection, while
+   the next call to Service C is protected at the application level.
 
    For application-level protection we currently propose two alternative
    solutions, one inspired by DPoP [RFC9449] and one which is a profile
@@ -134,13 +133,14 @@ Table of Contents
    |            |               |            |
    |            |               | Workload B |
    | Workload A |==============>|            |
-   |            |               +------------+
-   |            |               |    PEP     |
-   +------------+               +------------+
-         ^                            ^
-         |                            |
-         |                            |
-         v                            v
+   |            |               |   +--------+
+   |            |               |   |  PEP   |
+   +------------+               +---+--------+
+         ^                        ^     ^
+         |                        |     |
+         | +----------------------+     |
+         | |                            |
+         v v                            v
    +------------+               +------------+
    |            |               |            |
    |  Identity  |               |    PDP     |
@@ -174,7 +174,13 @@ Table of Contents
       to consult with an external server to decide whether to accept the
       call.
 
+   *  Workload B returns a response to Workload A, which may be an error
+      response or a regular one.
+
 2.  Conventions and Definitions
+
+   This document uses "service" and "workload" interchangeably.
+   Otherwise, all terms are as defined by [I-D.ietf-wimse-arch].
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
